@@ -38,15 +38,12 @@ client.on("message", async (msg) => {
 
       //Toca link
       servers.server.dispatcher = servers.server.connection.play(ytdl(link))
-      var yt= ytdl(link)
       
-      var nomeMusica = ytdl.getVideoID(link)
-      console.log(nomemusica)
       
       
       //Bucetinha só apos entrar em link
       if(link) {
-        msg.channel.send("Tocando: "+nomeMusica)
+        msg.channel.send("Tocando: ")
       }
     }
 
@@ -59,12 +56,12 @@ client.on("message", async (msg) => {
     //Pausa a msc
     if(msg.content === prefix + "pause") {
       await servers.server.dispatcher.pause()
-
-      //Retorna a msc
-      if(msg.content === prefix + "resume") {
-        servers.server.dispatcher.resume()
-      } 
     }
+
+     //Retorna a msc
+     if(msg.content === prefix + "resume") {
+      servers.server.dispatcher.resume()
+    } 
 
     //Para a música
     if(msg.content === prefix + "stop") {
