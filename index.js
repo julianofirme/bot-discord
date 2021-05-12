@@ -1,10 +1,11 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
 const ytdl = require('ytdl-core') 
+const token = require('./src/services/token')
 
+
+//Config discord js
 const prefix = "!"
-
-const token = 'ODQyMDAyNjExNTMxNDE1NTky.YJu-Cg.dbZGEF0nfeKD9YfdDHmOtj41Upk'
 
 const servers = {
     'server': {
