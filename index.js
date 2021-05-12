@@ -1,7 +1,10 @@
 const Discord = require('discord.js')
+const ytsr = require('ytsr')
 const client = new Discord.Client()
+const { google } = require('googleapis')
 const ytdl = require('ytdl-core') 
 const token = require('./src/services/token')
+
 
 
 //Config discord js
@@ -14,11 +17,8 @@ const servers = {
     }
 }
 
-const ytdlOptions = {
-  filter: 'audioonly'
-}
-
 client.on("message", async (msg) => {
+
 
     //Ignora msg vindas de fora do servidor
     if (!msg.guild) return
@@ -38,8 +38,6 @@ client.on("message", async (msg) => {
 
       //Toca link
       servers.server.dispatcher = servers.server.connection.play(ytdl(link))
-      
-      
       
       //Bucetinha só apos entrar em link
       if(link) {
@@ -65,8 +63,8 @@ client.on("message", async (msg) => {
 
     //Para a música
     if(msg.content === prefix + "stop") {
-      servers.server.dispatcher.pause()
+      servers.server.dispatcher.destroy()
     } 
 })  
 
-client.login(token)
+client.login(token.discord)

@@ -12,10 +12,13 @@
     "express": "^4.17.1",
     "ffmpeg": "0.0.4",
     "ffmpeg-static": "^4.3.0",
+    "google-auth-library": "^7.0.4",
+    "googleapis": "^73.0.0",
     "nodemon": "^2.0.7",
     "opusscript": "0.0.8",
     "readable-stream": "^3.6.0",
     "ytdl": "^1.4.1",
-    "ytdl-core": "^4.7.0"
+    "ytdl-core": "^4.7.0",
+    "ytsr": "^3.5.0"
   }
 }
