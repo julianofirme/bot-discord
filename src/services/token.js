@@ -1,3 +1,3 @@
-const token = 'ODQyMDAyNjExNTMxNDE1NTky.YJu-Cg.dbZGEF0nfeKD9YfdDHmOtj41Upk'
+const token = 'token'
 
 module.exports = token

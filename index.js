@@ -14,6 +14,9 @@ const servers = {
     }
 }
 
+const ytdlOptions = {
+  filter: 'audioonly'
+}
 
 client.on("message", async (msg) => {
 
